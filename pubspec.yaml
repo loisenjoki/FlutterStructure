@@ -1,0 +1,63 @@
+name: my_app
+description: A new Flutter application.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.6.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  ping9:
+    path: ./modules/ping9
+  flutter_icons: ^1.1.0
+  cupertino_icons: ^1.0.0
+
+  # -- Helper
+  url_launcher: ^5.4.5
+  auto_route: ^0.6.9
+  logger: ^0.9.4
+
+  # -- Widget
+  shimmer: ^1.1.1
+
+  # -- firebase
+
+  # -- State Management
+  provider: ^4.3.3
+  get: ^3.17.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^1.10.1
+  auto_route_generator:
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/images/locale/
+    - assets/images/ui/
+    # Locale
+    - assets/locale/en/
+    - assets/locale/vi/
+# flutter packages pub run build_runner build
+# flutter packages pub run build_runner watch --delete-conflicting-outputs  --enable-experiment=non-nullable
+
+# keytool -exportcert -alias androiddebugkey -keystore "C:\Users\Mica\.android\debug.keystore" | "C:\Users\Mica\Downloads\openssl-0.9.8e_X64\bin\openssl" sha1 -binary | "C:\Users\Mica\Downloads\openssl-0.9.8e_X64\bin\openssl" base64
+
+# for facebook key hash
+# keytool -list -v -keystore key.jks -alias key
+
+# keytool -exportcert -alias key -keystore C:\Users\Mica\Documents\yegobox\clean\leftMidApp\android\app\external\key.jks | "C:\Users\Mica\Downloads\openssl-0.9.8e_X64\bin\openssl" sha1 -binary | "C:\Users\Mica\Downloads\openssl-0.9.8e_X64\bin\openssl" base64
+
+# flutter build appbundle --build-name=1.8.9  --build-number=189
+# flutter build apk --build-name=1.6.0  --build-number=160
+
+# generate launcher icon
+# flutter pub run flutter_launcher_icons:main
